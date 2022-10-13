@@ -1,0 +1,34 @@
+Source: node-es6-set
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-d <!nocheck>
+ , node-es5-ext <!nocheck>
+ , node-es6-iterator <!nocheck>
+ , node-es6-symbol <!nocheck>
+ , node-event-emitter <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-es6-set
+Vcs-Git: https://salsa.debian.org/js-team/node-es6-set.git
+Homepage: https://github.com/medikoo/es6-set
+Rules-Requires-Root: no
+
+Package: node-es6-set
+Architecture: all
+Depends: ${misc:Depends}
+ , node-d
+ , node-es5-ext
+ , node-es6-iterator
+ , node-es6-symbol
+ , node-event-emitter
+Description: ECMAScript6 Set polyfill
+ Set collection as specified in ECMAScript6
+ .
+ Warning: 0.1 version does not ensure O(1) algorithm complexity (but O(n)).
+ This shortcoming will be addressed in 1.0.
+ .
+ Node.js is an event-based server-side JavaScript engine.
